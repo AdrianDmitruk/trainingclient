@@ -1,0 +1,17 @@
+@import "src/theme/variables";
+
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	margin-top: 24px;
+
+	&Card {
+		padding: 16px;
+		background: $gray-800;
+		border-radius: 12px;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+}

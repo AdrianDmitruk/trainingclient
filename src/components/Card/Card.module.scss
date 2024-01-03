@@ -1,0 +1,18 @@
+@import "src/theme/variables";
+@import "src/theme/fonts";
+
+.card {
+	display: flex;
+	width: 100%;
+	background: $gray-600;
+	padding: 16px;
+	border-radius: 12px;
+	color: $gray-200;
+	text-transform: uppercase;
+	@include heading-xs;
+
+	&:hover {
+		background: $gray-700;
+		color: $white;
+	}
+}

@@ -1,0 +1,17 @@
+@import "src/theme/variables";
+@import "src/theme/fonts";
+
+.admin {
+	background: $gray-800;
+	border-radius: 12px;
+	padding: 16px;
+	margin-top: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	&Wrap {
+		display: flex;
+		gap: 16px;
+	}
+}

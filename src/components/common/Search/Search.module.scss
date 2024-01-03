@@ -1,0 +1,24 @@
+@import "src/theme/variables";
+@import "src/theme/fonts";
+
+.search {
+	width: 100%;
+	padding: 16px;
+	background: $gray-800;
+	border-radius: 12px;
+
+	&Input {
+		width: 100%;
+		background: $gray-600;
+		border-radius: 12px;
+		padding: 17px 20px;
+
+		@include text-md;
+		color: $gray-400;
+
+		&::placeholder {
+			@include text-md;
+			color: $gray-400;
+		}
+	}
+}

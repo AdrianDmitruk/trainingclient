@@ -1,0 +1,43 @@
+@import "src/theme/variables";
+@import "src/theme/fonts";
+
+.full {
+	background: $gray-800;
+	border-radius: 12px;
+	padding: 16px;
+	margin-top: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	&Title {
+		background: $gray-600;
+		border-radius: 12px;
+		padding: 16px;
+		text-transform: uppercase;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		align-items: center;
+		@include heading-lg;
+		color: $gray-200;
+	}
+
+	&BlockVideo {
+		border-radius: 12px;
+	}
+
+	&WrapTitle {
+		margin-bottom: 16px;
+		text-align: center;
+		@include heading-md;
+		text-transform: uppercase;
+		color: $white;
+	}
+
+	&WrapCard {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+}
