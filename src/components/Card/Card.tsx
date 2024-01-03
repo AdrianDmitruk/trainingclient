@@ -8,8 +8,8 @@ interface ICardProps {
 	data: IPost
 }
 
-export const Card: FC<ICardProps> = ({ data }) => {
-	const { day, month, year, title, type, _id } = data
+export const Card: FC<ICardProps> = ({ data: cardPostData }) => {
+	const { day, month, year, title, type, _id } = cardPostData
 
 	const date = `${day}-${month <= 9 ? "0" + month : month}-${year}`
 

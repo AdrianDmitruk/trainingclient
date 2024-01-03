@@ -8,7 +8,10 @@ interface IButtonProps {
 	children: ReactNode
 }
 
-export const Button: FC<IButtonProps> = ({ link, children }) => {
+export const Button: FC<IButtonProps> = ({
+	link,
+	children: buttonChildren,
+}) => {
 	const clickDown = () => {
 		if (link) {
 			getFileLink(link)
@@ -16,7 +19,7 @@ export const Button: FC<IButtonProps> = ({ link, children }) => {
 	}
 	return (
 		<button onClick={clickDown} className={styles.button}>
-			{children}
+			{buttonChildren}
 		</button>
 	)
 }
