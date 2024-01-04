@@ -1,4 +1,5 @@
 export interface ICreateParams {
+	_id?: string
 	title: string
 	type: string
 	day: number

@@ -1,0 +1,35 @@
+@import "src/theme/variables";
+@import "src/theme/fonts";
+
+.add {
+	&Content {
+		border-radius: 12px;
+		background: $white;
+		padding: 24px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	&Date {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	&Margen {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		width: 100%;
+	}
+
+	&Gp {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		align-items: center;
+		gap: 10px;
+	}
+}

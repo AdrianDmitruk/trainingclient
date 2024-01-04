@@ -24,7 +24,9 @@ export const MainPage: FC = () => {
 			<Search />
 			<div className={styles.mainCard}>
 				{!data.posts.length && <Loader />}
-				{data && data.posts.map(item => <Card key={item._id} data={item} />)}
+				{data.posts.map(item => (
+					<Card key={item._id} data={item} />
+				))}
 			</div>
 		</div>
 	)
