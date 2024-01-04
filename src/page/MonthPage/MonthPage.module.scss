@@ -1,0 +1,18 @@
+@import "src/theme/variables";
+@import "src/theme/fonts";
+
+.month {
+	padding: 16px;
+	background: $gray-800;
+	border-radius: 12px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin-top: 24px;
+
+	&NotTitle {
+		@include heading-xl;
+		color: $gray-400;
+		text-align: center;
+	}
+}

@@ -15,7 +15,9 @@ export const Video: FC<IVideoProps> = ({ title, link, linkDownload }) => {
 		<div className={styles.video}>
 			<h3 className={styles.videoTitle}>{title}</h3>
 			<div className={styles.videoWrap}>
-				<ReactPlayer url={link} width='100%' height='100%' />
+				<div className={styles.videoPlayer}>
+					<ReactPlayer url={link} width='100%' height='100%' controls />
+				</div>
 			</div>
 			<div className={styles.videoBtn}>
 				<Button link={linkDownload}>Скачать</Button>

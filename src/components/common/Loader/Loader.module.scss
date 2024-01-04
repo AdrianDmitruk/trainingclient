@@ -1,0 +1,31 @@
+.wrap {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+	margin: 0 auto;
+
+	&Img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+		animation: fade 2s ease-in-out alternate infinite;
+	}
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0.97);
+	}
+	50% {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0.97);
+	}
+}
