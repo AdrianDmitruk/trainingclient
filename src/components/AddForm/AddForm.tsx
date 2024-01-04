@@ -11,14 +11,14 @@ import {
 } from "antd"
 import CheckableTag from "antd/es/tag/CheckableTag"
 import { FC, useEffect, useState } from "react"
-import { ICreateParams } from "../../redux/posts/types"
+import { IPost } from "../../redux/posts/types"
 import { createPost, updatePost } from "../../services/postServices"
 import styles from "./AddForm.module.scss"
 
 const countTreaning = ["Основная тренировка", "Вечерняя"]
 
 interface IAddFormProps {
-	data?: ICreateParams
+	data?: IPost
 	isUpdate: boolean
 }
 
