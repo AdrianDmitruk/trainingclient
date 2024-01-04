@@ -1,7 +1,8 @@
 import { FC } from "react"
 
 import { Link } from "react-router-dom"
-import { IPost } from "../../services/type"
+
+import { IPost } from "../../redux/posts/types"
 import styles from "./Card.module.scss"
 
 interface ICardProps {

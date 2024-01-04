@@ -10,13 +10,19 @@ import {
 	notification,
 } from "antd"
 import CheckableTag from "antd/es/tag/CheckableTag"
-import { useEffect, useState } from "react"
+import { FC, useEffect, useState } from "react"
+import { ICreateParams } from "../../redux/posts/types"
 import { createPost, updatePost } from "../../services/postServices"
 import styles from "./AddForm.module.scss"
 
 const countTreaning = ["Основная тренировка", "Вечерняя"]
 
-export const AddForm = ({ data, isUpdate }) => {
+interface IAddFormProps {
+	data?: ICreateParams
+	isUpdate: boolean
+}
+
+export const AddForm: FC<IAddFormProps> = ({ data, isUpdate }) => {
 	const { Text } = Typography
 	const [title, setTitle] = useState<string>()
 	const [type, setType] = useState<string>("Тренировка")
