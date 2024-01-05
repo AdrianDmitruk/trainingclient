@@ -104,6 +104,9 @@ export enum Status {
 
 export type PostsSliceState = {
 	data: IPostsList
+	searchQuery: string
+	key: number
+	year: string
 	status: Status
 }
 

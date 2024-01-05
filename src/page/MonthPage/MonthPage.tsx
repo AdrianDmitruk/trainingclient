@@ -16,7 +16,7 @@ interface Months {
 
 export const MonthPage: FC = () => {
 	const { month } = useParams()
-	const { data, status } = useSelector(selectPostsData)
+	const { data, status, year } = useSelector(selectPostsData)
 
 	const dispatch = useAppDispatch()
 
@@ -45,14 +45,14 @@ export const MonthPage: FC = () => {
 						search: "",
 						sortValue: monthNumber,
 						page: "1",
-						year: "2023",
+						year: year,
 					})
 				)
 			} else {
 				console.log("Неверное название месяца")
 			}
 		}
-	}, [dispatch, month])
+	}, [dispatch, month, year])
 
 	if (status === Status.LOADING) {
 		return <Loader />

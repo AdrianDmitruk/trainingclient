@@ -1,4 +1,5 @@
 @import "src/theme/variables";
+@import "src/theme/fonts";
 
 .main {
 	display: flex;
@@ -13,5 +14,24 @@
 		display: flex;
 		flex-direction: column;
 		gap: 16px;
+	}
+
+	&CardTitle {
+		@include heading-md;
+		text-transform: uppercase;
+		text-align: center;
+		color: $gray-500;
+	}
+
+	&Pagination {
+		display: flex;
+		justify-content: center;
+		background: $gray-800;
+		padding: 16px;
+		border-radius: 12px;
+	}
+
+	&PaginationItem {
+		color: white !important;
 	}
 }

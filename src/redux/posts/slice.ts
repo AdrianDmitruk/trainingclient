@@ -10,13 +10,26 @@ const initialState: PostsSliceState = {
 		currentPage: 0,
 		posts: [],
 	},
+	key: 0,
+	year: "2023",
+	searchQuery: "",
 	status: Status.SUCCESS,
 }
 
 export const postsSlice = createSlice({
 	name: "posts",
 	initialState,
-	reducers: {},
+	reducers: {
+		setKey(state, action: PayloadAction<number>) {
+			state.key = action.payload
+		},
+		setSearchQuery(state, action: PayloadAction<string>) {
+			state.searchQuery = action.payload
+		},
+		setYear(state, action: PayloadAction<string>) {
+			state.year = action.payload
+		},
+	},
 	extraReducers: builder => {
 		builder.addCase(
 			getPostsFeatch.fulfilled,
@@ -34,5 +47,7 @@ export const postsSlice = createSlice({
 		})
 	},
 })
+
+export const { setSearchQuery, setKey, setYear } = postsSlice.actions
 
 export default postsSlice.reducer

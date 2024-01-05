@@ -12,6 +12,24 @@
 
 	&Wrap {
 		display: flex;
+		align-items: center;
 		gap: 16px;
+	}
+
+	&Yan {
+		@include text-md;
+		color: $white;
+	}
+
+	&Pagination {
+		display: flex;
+		justify-content: center;
+		background: $gray-800;
+		padding: 16px;
+		border-radius: 12px;
+	}
+
+	&PaginationItem {
+		color: white !important;
 	}
 }

@@ -1,6 +1,5 @@
 import axiosInstance from "../api"
 import { ICreateParams } from "../redux/posts/types"
-// import { ICreateParams, IPost, IPostsList } from "./type"
 
 export const createPost = async (params: ICreateParams) => {
 	try {

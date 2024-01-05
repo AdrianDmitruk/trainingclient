@@ -1,20 +1,24 @@
-import React, { FC, useState } from "react"
-
+import debounce from "lodash.debounce"
+import React, { FC, useCallback, useState } from "react"
+import { setSearchQuery } from "../../../redux/posts/slice"
+import { useAppDispatch } from "../../../redux/store"
 import styles from "./Search.module.scss"
 
 export const Search: FC = () => {
 	const [value, setValue] = useState("")
 
-	// const updateSearchValue = useCallback(
-	// 	debounce(str => {
-	// 		// dispatch(setSearchValue(str));
-	// 	}, 900),
-	// 	[]
-	// )
+	const dispatch = useAppDispatch()
+
+	const updateSearchValue = useCallback(
+		debounce(str => {
+			dispatch(setSearchQuery(str))
+		}, 900),
+		[]
+	)
 
 	const onChangeInput = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setValue(event.target.value)
-		// updateSearchValue(event.target.value)
+		updateSearchValue(event.target.value)
 	}
 
 	return (

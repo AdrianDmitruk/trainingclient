@@ -20,6 +20,7 @@
 		display: flex;
 		gap: 16px;
 		flex-wrap: wrap;
+		justify-content: center;
 	}
 
 	&NavLink {
@@ -30,5 +31,31 @@
 		&:hover {
 			color: $white;
 		}
+	}
+
+	&NavLinkActive {
+		@include text-md;
+		text-transform: uppercase;
+		color: $white;
+	}
+
+	&Year {
+		display: flex;
+		gap: 16px;
+	}
+
+	&YearLink {
+		@include text-md;
+		text-transform: uppercase;
+		color: $gray-400;
+		cursor: pointer;
+
+		&:hover {
+			color: $white;
+		}
+	}
+
+	&YearLinkActive {
+		color: $white !important;
 	}
 }
