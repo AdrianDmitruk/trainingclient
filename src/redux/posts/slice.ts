@@ -11,7 +11,7 @@ const initialState: PostsSliceState = {
 		posts: [],
 	},
 	key: 0,
-	year: "2023",
+	year: "2024",
 	searchQuery: "",
 	status: Status.SUCCESS,
 }
