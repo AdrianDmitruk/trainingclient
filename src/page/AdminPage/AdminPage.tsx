@@ -14,7 +14,7 @@ import { removePost } from "../../services/postServices"
 import styles from "./AdminPage.module.scss"
 
 export const AdminPage: FC = () => {
-	const { data } = useSelector(selectPostsData)
+	const { data, year } = useSelector(selectPostsData)
 	const dispatch = useAppDispatch()
 	const navigate = useNavigate()
 
@@ -38,10 +38,10 @@ export const AdminPage: FC = () => {
 				search: "",
 				sortValue: "all",
 				page: page.toString(),
-				year: "2023",
+				year: year,
 			})
 		)
-	}, [dispatch, page])
+	}, [dispatch, page, year])
 
 	const handleUpdate = (id: string) => {
 		navigate(`/admin/update/${id}`)
